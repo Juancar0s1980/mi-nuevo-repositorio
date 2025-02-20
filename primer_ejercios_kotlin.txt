@@ -1,0 +1,22 @@
+fun main() {
+    val nombres = listOf("Daniel", "Cristhian", "Adrian", "Carlos", "Fabiana")
+    val edades = listOf(21, 17, 20, 16, 24)
+
+    val mayoresEdad = mutableListOf<Pair<String, Int>>() // creo una arraylist en este caso mutableListOf= se puede modificar
+    // el Pair es una extructura de datos que permite guardar dos valores relacionados entre si "nombre y edad" sirve para,
+    // manejar informacion en pares sin definir clases personalizadas.package
+    
+    for (i in nombres.indices) { // el .indices genera un rango de 0 asta n-1
+        if (edades[i] >= 18) {
+            mayoresEdad.add(nombres[i] to edades[i])
+        }
+    }
+
+    println("Personas mayores de edad:")
+    for (persona in mayoresEdad) {
+    	println("Nombre: ${persona.first}") // el first se usa porque al usar Pair cada  par tiene un valor en este caso un nombre
+    	println("Edad: ${persona.second} años") // el second se usa porque al usar Pair cada  par tiene un valor en este caso una edad
+    	
+}
+
+}

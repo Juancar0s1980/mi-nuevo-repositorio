@@ -1,0 +1,16 @@
+fun main() {
+    val numeros = listOf(20.5, 60.0, 30.3, 55.8, 50.2)
+
+    println("Lista de números: $numeros")
+    
+    fun calcularPromedio(lista: List<Double>): Double {
+    var suma = 0.0
+    for (num in lista) {
+        suma += num
+    }
+    return suma / lista.size
+	}
+
+    val promedioNum = calcularPromedio(numeros)
+    println("El promedio de la lista es: $promedioNum")
+}
