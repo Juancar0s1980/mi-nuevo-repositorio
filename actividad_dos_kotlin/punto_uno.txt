@@ -1,0 +1,15 @@
+/* Validar si el número 1 es mayor que el número 2, 
+   crear una función de extensión para la clase Boolean 
+   que debe convertir los resultados Boolean a las palabras "SI" o "NO" */
+
+fun main() {
+    val numero1 = 100
+    val numero2 = 50
+
+    println(numero1.esMayorQue(numero2))
+}
+
+// Función de extensión para Boolean que convierte true en "SI" y false en "NO"
+fun Int.esMayorQue(num: Int): String {
+    return if (this > num) "SI" else "NO"
+}

@@ -1,0 +1,14 @@
+/* Crear una función de extensión para la clase List que devuelva la suma de todos los elementos de la lista. */
+fun main() {
+    val lista = listOf(100, 4, 18, 8, 12)
+    println(lista.sumaLista())
+}
+
+// Función de extensión para List<Int> que devuelve la suma de los elementos
+fun List<Int>.sumaLista(): Int {
+    var suma = 0
+    for (num in this) {
+        suma += num
+    }
+    return suma
+}

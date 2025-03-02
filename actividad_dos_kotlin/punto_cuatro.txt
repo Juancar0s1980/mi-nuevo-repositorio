@@ -1,0 +1,15 @@
+/* Crear una función de extensión para la clase String que invierta la cadena. */
+fun main() {
+    val texto = "hola buenos días"
+    println(texto.invertir())
+}
+
+// Función que invierte la cadena
+fun String.invertir(): String {
+    var resultado = ""
+    for (i in 0 until this.length) {
+        resultado += this[this.length - 1 - i]
+    }
+    return resultado
+}
+

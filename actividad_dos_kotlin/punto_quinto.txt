@@ -1,0 +1,22 @@
+/* Crear una función de extensión para la clase Double que redondee el número a un número entero. */
+fun main() {
+    val numeroDecimal = 10.5
+    println(numeroDecimal.redondear())
+}
+
+// Función que redondea a entero
+fun Double.redondear(): Int {
+    var parteEntera = 0.0  // Inicializamos la parte entera
+    var decimal = this
+
+    while (decimal >= 1) {  // Determinamos la parte entera
+        parteEntera += 1
+        decimal -= 1
+    }
+
+    return if (decimal >= 0.5) {  // Redondeamos según el valor de 'decimal'
+        parteEntera.toInt() + 1
+    } else {
+        parteEntera.toInt()
+    }
+}
