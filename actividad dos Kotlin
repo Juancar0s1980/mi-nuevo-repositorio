@@ -1,0 +1,11 @@
+fun main() {
+    val numero1 = 100
+    val numero2 = 50
+
+    println(numero1.esMayorQue(numero2))
+}
+
+// Función de extensión para Boolean que convierte true en "SI" y false en "NO"
+fun Int.esMayorQue(num: Int): String {
+    return if (this > num) "SI" else "NO"
+}
